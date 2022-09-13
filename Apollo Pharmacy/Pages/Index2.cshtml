@@ -1,0 +1,30 @@
+﻿@page
+@model Apollo_Pharmacy.Pages.Index2Model
+@{
+    ViewData["Title"] = "Hospitals";
+}
+
+<br>
+<h2>Hospital List</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Hospital Id</th>
+            <th>Name</th>
+            <th>City</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.hospitalList){
+            <tr>
+                <td>@item.hid</td>
+                <td>@item.hname</td>
+                <td>@item.hcity</td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
